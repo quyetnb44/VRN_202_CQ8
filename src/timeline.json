@@ -1,0 +1,149 @@
+[
+    {
+        "time": "1985",
+        "main": "Đổi tiền và cải cách tiền tệ",
+        "detail": "Phát hành bộ tiền giấy mới, tiền đề dẫn đến siêu lạm phát.",
+        "img": "https://lh4.googleusercontent.com/proxy/3d6R0Ej5LA1Uv43z5_ojuEBu2WH_ALwhv1DbJP2_l2de2sOX81X2PRaeEg8aXAehthHBVpxfwqzRkIIBmOKwROfvO7vO_gSeW3epGEd970Sj_yWkHZCjWmI",
+        "icon": "money",
+        "info": [
+            "Cuộc đổi tiền với tỷ lệ 1 đồng mới = 10 đồng cũ, nhằm giải quyết mất cân đối kinh tế và kiềm chế lạm phát.",
+            "Chính sách thất bại, dẫn đến siêu lạm phát đỉnh điểm 774.7% vào năm 1986.",
+            "Quy mô kinh tế (GDP) năm 1985 chỉ khoảng 14,09 tỷ USD.",
+            "Đời sống người dân vô cùng khó khăn, hàng hóa khan hiếm."
+        ]
+    },
+    {
+        "time": "1986",
+        "main": "Khởi xướng Đổi Mới tại Đại hội VI Đảng",
+        "detail": "Đại hội Đảng lần thứ VI khởi xướng Đổi Mới toàn diện về kinh tế và xã hội.",
+        "img": "https://file3.qdnd.vn/data/images/0/2025/01/29/upload_2176/dhvi.jpg",
+        "icon": "policy",
+        "info": [
+            "Xóa bỏ cơ chế kinh tế bao cấp, chuyển sang kinh tế thị trường.",
+            "Thực hiện chính sách kinh tế nhiều thành phần, khuyến khích tư nhân và các thành phần kinh tế khác.",
+            "Chính sách 'giải phóng lực lượng sản xuất' đã bắt đầu tạo tiền đề cho sự phát triển kinh tế."
+        ]
+    },
+    {
+        "time": "1986-1990",
+        "main": "Giai đoạn đầu Đổi Mới",
+        "detail": "Tăng trưởng GDP bình quân 4,4%/năm, nền kinh tế ra khỏi trì trệ.",
+        "img": "https://image.tinnhanhchungkhoan.vn/400x300/Uploaded/2025/WpxlCdjwi/2014_03_28/5dt_QFHP.bmp",
+        "icon": "growth",
+        "info": [
+            "Kim ngạch xuất khẩu tăng bình quân 28%/năm, vượt chỉ tiêu chủ yếu của kế hoạch 5 năm.",
+            "Các nghị định đầu tiên về kinh tế tư nhân và cá thể (Nghị định 27, 28, 29/HĐBT năm 1988) được ban hành, tạo hành lang pháp lý cho các thành phần kinh tế ngoài quốc doanh."
+        ]
+    },
+    {
+        "time": "1991-1995",
+        "main": "Tiếp tục chính sách kinh tế nhiều thành phần",
+        "detail": "Tăng trưởng GDP bình quân 8,2%/năm, duy trì tốc độ cao.",
+        "img": "https://vnn-imgs-f.vgcloud.vn/2018/12/13/14/hoi-nong-dan-viet-nam-da-co-10-2-trieu-thanh-vien.jpg?width=0&s=RfjIV0EM3dIEmJdI3UM4vw",
+        "icon": "agriculture",
+        "info": [
+            "Nhờ chính sách Khoán 10 (Nghị quyết 10-NQ/TW năm 1988), sản lượng lương thực tăng mạnh 27%.",
+            "Việt Nam từ một nước thiếu đói đã trở thành nước xuất khẩu hàng đầu thế giới về gạo, cà phê, hạt điều và cao su."
+        ]
+    },
+    {
+        "time": "1995",
+        "main": "Gia nhập ASEAN và bình thường hóa quan hệ với Mỹ",
+        "detail": "Đánh dấu bước ngoặt lớn trong hội nhập quốc tế.",
+        "img": "https://bcp.cdnchinhphu.vn/334894974524682240/2025/3/10/tbt4-100325-17415887745011997278576.jpg",
+        "icon": "handshake",
+        "info": [
+            "Việt Nam trở thành thành viên chính thức thứ 7 của Hiệp hội các quốc gia Đông Nam Á (ASEAN).",
+            "Bình thường hóa quan hệ với Mỹ, mở ra cơ hội thương mại và đầu tư lớn."
+        ]
+    },
+    {
+        "time": "1996-2000",
+        "main": "Đẩy mạnh công nghiệp hóa, hiện đại hóa",
+        "detail": "Tăng trưởng GDP bình quân 7%/năm, vượt qua nhiều thách thức.",
+        "img": "https://cdn.thuvienphapluat.vn/uploads/tintuc/2023/12/14/cong-nghiep-hoa-hien-dai-hoa-viet-nam.jpg",
+        "icon": "industry",
+        "info": [
+            "Việt Nam ít bị ảnh hưởng trực tiếp từ Khủng hoảng tài chính châu Á 1997 nhờ nền kinh tế chưa mở cửa quá sâu và hệ thống tài chính còn cô lập",
+            "Tuy nhiên, nền kinh tế vẫn suy giảm do các yếu kém nội tại trong khu vực doanh nghiệp nhà nước."
+        ]
+    },
+    {
+        "time": "2001",
+        "main": "Đại hội IX xác định kinh tế thị trường định hướng xã hội chủ nghĩa",
+        "detail": "Đại hội đặt nền móng cho mô hình kinh tế tổng quát.",
+        "img": "https://cdn-images.vtv.vn/thumb_w/730/2020/6/6/dh9-1591457893186476988116.jpg",
+        "icon": "policy",
+        "info": [
+            "Kinh tế thị trường được xác định là mô hình chủ đạo trong thời kỳ quá độ lên chủ nghĩa xã hội.",
+            "Tạo cơ sở lý luận và thực tiễn vững chắc cho các bước phát triển và hội nhập tiếp theo."
+        ]
+    },
+    {
+        "time": "2001-2005",
+        "main": "Đi vào chiều sâu Đổi Mới",
+        "detail": "Tăng trưởng GDP bình quân 7,5%/năm.",
+        "img": "https://imgcdn.tapchicongthuong.vn/tcct-media/23/7/16/san-xuat-cong-nghiep.jpg",
+        "icon": "growth",
+        "info": [
+            "Tiếp tục chuyển dịch cơ cấu kinh tế mạnh mẽ từ nông nghiệp sang công nghiệp và dịch vụ.",
+            "Tạo đà cho giai đoạn hội nhập sâu rộng hơn."
+        ]
+    },
+    {
+        "time": "2006-2010",
+        "main": "Ra khỏi tình trạng kém phát triển",
+        "detail": "Tăng trưởng GDP bình quân 7.01%/năm.",
+        "img": "https://tttctt.1cdn.vn/2023/06/29/tang-truong-kinh-te-viet-nam.jpg",
+        "icon": "develop",
+        "info": [
+            "Việt Nam chính thức trở thành quốc gia có thu nhập trung bình thấp theo Ngân hàng Thế giới.",
+            "Tổng GDP tăng từ 31.2 tỷ USD (2000) lên 100.8 tỷ USD (2010), tiềm lực kinh tế tăng lên đáng kể."
+        ]
+    },
+    {
+        "time": "2007",
+        "main": "Gia nhập WTO",
+        "detail": "Trở thành thành viên thứ 150 của Tổ chức Thương mại Thế giới.",
+        "img": "https://media.vov.vn/sites/default/files/styles/large/public/2022-01/8f52c48066f99aed1afdf5b5000d6e7d.jpg",
+        "icon": "globe",
+        "info": [
+            "Mở rộng quan hệ kinh tế quốc tế, thu hút mạnh mẽ vốn đầu tư trực tiếp nước ngoài (FDI).",
+            "Đóng vai trò quan trọng trong việc thúc đẩy thương mại và thu hút đầu tư nước ngoài."
+        ]
+    },
+    {
+        "time": "2011-2020",
+        "main": "Duy trì tăng trưởng ổn định",
+        "detail": "Tăng trưởng GDP bình quân gần 6%/năm.",
+        "img": "https://consosukien.vn/pic/News/duy-tri-tang-truong-cao-ben-vung-lien-tuc-trong-thoi-gian-tu-nay-toi-2045.jpg",
+        "icon": "stable",
+        "info": [
+            "GDP đạt 343,6 tỷ USD (2020), thu nhập bình quân đầu người 3.521 USD.",
+            "Tỷ lệ nghèo đa chiều giảm từ 58% (1993) xuống còn dưới 2% (2020), là một trong những thành tựu nổi bật nhất."
+        ]
+    },
+    {
+        "time": "2019",
+        "main": "Ký Hiệp định EVFTA và IPA với Châu Âu",
+        "detail": "Ký kết hai hiệp định quan trọng với Liên minh châu Âu (EU) sau 9 năm đàm phán.",
+        "img": "https://www.tapchicongsan.org.vn/image/journal/article?img_id=27806396&t=1584202343729",
+        "icon": "eu",
+        "info": [
+            "Hiệp định Thương mại tự do Việt Nam-EU (EVFTA) có hiệu lực từ tháng 8/2020, mở rộng cơ hội thương mại với 27 quốc gia châu Âu.",
+            "Hiệp định Bảo hộ Đầu tư (IPA) thúc đẩy dòng vốn FDI chất lượng cao từ EU vào Việt Nam."
+        ]
+    },
+    {
+        "time": "2021-2025",
+        "main": "Đẩy mạnh công nghiệp hóa và hội nhập",
+        "detail": "Tiếp tục duy trì tăng trưởng, hướng tới mục tiêu phát triển bền vững.",
+        "img": "https://thuonghieuvaphapluat.vn/Images/vantoi/2021/01/26/vi-the-viet-nam-4-221351.jpg",
+        "icon": "future",
+        "info": [
+            "Dự báo GDP (nominal) năm 2025 có thể đạt khoảng 490 tỷ USD, xếp thứ 5 Đông Nam Á.",
+            "Tỷ lệ hộ nghèo đa chiều được dự báo giảm xuống khoảng 4.06% vào năm 2024 (số liệu mới nhất).",
+            "Thiết lập quan hệ ngoại giao với 194 quốc gia và các vùng lãnh thổ trên thế giới."
+        ]
+    }
+]
