@@ -20,13 +20,14 @@ const NhanDinh = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#eceae1' }}>
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative bg-gradient-to-br from-red-800 via-red-700 to-red-900 text-yellow-300 py-20 px-6 overflow-hidden"
+        className="relative text-yellow-300 py-20 px-6 overflow-hidden"
+        style={{ background: 'linear-gradient(to bottom right, #6b291c, #6b291c, #6b291c)' }}
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -238,16 +239,16 @@ const NhanDinh = () => {
           className="mb-16"
         >
           <motion.div variants={fadeInUp} className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ background: 'linear-gradient(to right, #f59e0b, #6b291c)' }}>
               <RocketOutlined className="text-2xl text-white" />
             </div>
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Hội nhập, Đổi mới, Bứt phá</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto"></div>
+            <div className="w-24 h-1 mx-auto" style={{ background: 'linear-gradient(to right, #f59e0b, #6b291c)' }}></div>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             <motion.div variants={fadeInUp}>
-              <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-orange-50 to-red-50 border-orange-200">
+              <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-300 border" style={{ background: 'linear-gradient(to bottom right, rgba(251, 146, 60, 0.1), rgba(107, 41, 28, 0.1))', borderColor: 'rgba(251, 146, 60, 0.3)' }}>
                 <div className="text-center">
                   <div className="w-full h-48 mb-6 rounded-lg overflow-hidden">
                     <Image
@@ -529,14 +530,15 @@ const NhanDinh = () => {
           </motion.div>
 
           <motion.div variants={fadeInUp} className="text-center">
-            <Card className="shadow-xl bg-gradient-to-br from-red-800 to-red-900 text-yellow-300 border-red-700">
+            <Card className="shadow-xl border" style={{ backgroundColor: '#6b291c', color: '#fbbf24', borderColor: '#6b291c' }}>
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-6">Khám phá thêm về thành tựu Việt Nam</h3>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   {/* <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-900 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
+                    className="bg-gradient-to-r from-yellow-400 to-yellow-500 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
+                    style={{ color: '#6b291c' }}
                   >
                     <FileTextOutlined className="mr-2" />
                     Khám phá báo cáo chi tiết
@@ -563,7 +565,8 @@ const NhanDinh = () => {
                         window.open('https://media.vietnamplus.vn/images/87c1da582c501a99b4b23f2f14d2e91ff55546d9a543a98ddde2bb5de35ebb6418e172c8dc581a5ab52999553c6b5de97436a993dd05491988813a5aae53b9255040513851267fe007fe9f09f10c5946/infographics_kinh_te_vietnam.jpeg', '_blank');
                       }
                     }}
-                    className="bg-gradient-to-r from-yellow-300 to-orange-400 text-red-900 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center cursor-pointer"
+                    className="bg-gradient-to-r from-yellow-300 to-orange-400 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center cursor-pointer"
+                    style={{ color: '#6b291c' }}
                   >
                     <DownloadOutlined className="mr-2" />
                     Tải Infographic toàn cảnh
@@ -580,7 +583,8 @@ const NhanDinh = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-red-800 to-red-900 text-yellow-300 py-12"
+        className="text-yellow-300 py-12"
+        style={{ background: 'linear-gradient(to right, #6b291c, #6b291c)' }}
       >
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -590,7 +594,7 @@ const NhanDinh = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ color: '#6b291c' }}>
                 <BankOutlined className="text-xl" />
               </div>
               <h5 className="font-semibold mb-2">Chính phủ Việt Nam</h5>
@@ -605,7 +609,7 @@ const NhanDinh = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ color: '#6b291c' }}>
                 <GlobalOutlined className="text-xl" />
               </div>
               <h5 className="font-semibold mb-2">Ngân hàng Thế giới</h5>
@@ -620,7 +624,7 @@ const NhanDinh = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ color: '#6b291c' }}>
                 <LineChartOutlined className="text-xl" />
               </div>
               <h5 className="font-semibold mb-2">Reuters</h5>
@@ -635,7 +639,7 @@ const NhanDinh = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ color: '#6b291c' }}>
                 <RiseOutlined className="text-xl" />
               </div>
               <h5 className="font-semibold mb-2">Vietnam Briefing</h5>

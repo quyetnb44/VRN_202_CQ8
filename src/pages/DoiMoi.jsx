@@ -41,7 +41,7 @@ const DoiMoi = () => {
   // }
 
   return (
-    <div className="max-w-6xl mx-auto mt-20">
+    <div className="max-w-6xl mx-auto mt-20" style={{ backgroundColor: '#eceae1', minHeight: '100vh', padding: '2rem 0' }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ const DoiMoi = () => {
       >
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-            <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+            <span style={{ color: '#6b291c' }}>
               Thành tựu của thời kỳ
             </span>
             <br />
@@ -58,7 +58,7 @@ const DoiMoi = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed">
-            (1976-nay)
+            (1986-nay)
           </p>
         </div>
 

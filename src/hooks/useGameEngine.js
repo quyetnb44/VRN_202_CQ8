@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
 const COLLISION_DISTANCE = 0.05
-const GRAVITY = 0.001
-const TERMINAL_VELOCITY = 0.02
+const GRAVITY = 0.0003
+const TERMINAL_VELOCITY = 0.008
 
 export const useGameEngine = (speed = 1) => {
   const [phase, setPhase] = useState('idle') // 'idle' | 'playing' | 'ended'
@@ -12,6 +12,7 @@ export const useGameEngine = (speed = 1) => {
   const [counter, setCounter] = useState(10)
   const [message, setMessage] = useState('')
   const [result, setResult] = useState(null) // null | 'win' | 'lose'
+  const [bet, setBet] = useState(10)
   const animationFrameRef = useRef(null)
   const lastTimeRef = useRef(null)
   const planeRef = useRef({ x: 0, y: 0.5, vy: 0 })
@@ -55,6 +56,7 @@ export const useGameEngine = (speed = 1) => {
     setRockets(newRocks)
     setPlane(initialPlane)
     setCounter(bet)
+    setBet(bet)
     setPhase('playing')
     setMessage('')
     setResult(null)
@@ -73,12 +75,14 @@ export const useGameEngine = (speed = 1) => {
     setMultipliers([])
     setRockets([])
     setCounter(10)
+    setBet(10)
     setMessage('')
     setResult(null)
     planeRef.current = resetPlane
     multipliersRef.current = []
     rocketsRef.current = []
     counterRef.current = 10
+    betRef.current = 10
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current)
       animationFrameRef.current = null
@@ -116,7 +120,7 @@ export const useGameEngine = (speed = 1) => {
       lastTimeRef.current = currentTime
 
       // Update plane position
-      let newX = planeRef.current.x + deltaTime * speed * 0.3
+      let newX = planeRef.current.x + deltaTime * speed * 0.15
       let newY = planeRef.current.y + planeRef.current.vy
       let newVy = planeRef.current.vy + GRAVITY * deltaTime
       
@@ -127,16 +131,16 @@ export const useGameEngine = (speed = 1) => {
       // Keep plane within bounds
       if (newY < 0.05) {
         newY = 0.05
+        newVy = 0
+      }
+      if (newY > 0.95) {
+        newY = 0.95
         setPhase('ended')
         setMessage('Rơi xuống biển 🫠')
         setResult('lose')
         planeRef.current = { x: planeRef.current.x, y: newY, vy: 0 }
         setPlane(planeRef.current)
         return
-      }
-      if (newY > 0.95) {
-        newY = 0.95
-        newVy = 0
       }
 
       // Check win condition
@@ -156,7 +160,7 @@ export const useGameEngine = (speed = 1) => {
           mult.collected = true
           counterRef.current += mult.value
           setCounter(counterRef.current)
-          newVy = Math.max(newVy - 0.02, -TERMINAL_VELOCITY * 0.5)
+          newVy = Math.max(newVy - 0.008, -TERMINAL_VELOCITY * 0.5)
           setMultipliers([...multipliersRef.current])
         }
       })
@@ -167,7 +171,7 @@ export const useGameEngine = (speed = 1) => {
           rocket.collected = true
           counterRef.current = Math.floor(counterRef.current / 2)
           setCounter(counterRef.current)
-          newVy = Math.min(newVy + 0.04, TERMINAL_VELOCITY)
+          newVy = Math.min(newVy + 0.015, TERMINAL_VELOCITY)
           setRockets([...rocketsRef.current])
         }
       })
@@ -197,7 +201,7 @@ export const useGameEngine = (speed = 1) => {
     counter,
     message,
     result,
-    bet: betRef.current,
+    bet,
     startGame,
     resetGame
   }

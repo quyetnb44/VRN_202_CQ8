@@ -5,10 +5,21 @@ import { motion, AnimatePresence } from 'framer-motion'
 const menuItems = [
   { 
     path: '/bao-cap', 
-    label: 'Thời kì Bao cấp', 
+    label: 'Thời kì Bao cấp (Bối cảnh)', 
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 5h2v6h-2V7zm1 10a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/>
+
+      </svg>
+    )
+  },
+  { 
+    path: '/hoi-nhap', 
+    label: 'Hội nhập quốc tế', 
+    icon: (
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+
       </svg>
     )
   },
@@ -87,9 +98,9 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100">
+    <div className="flex flex-col h-screen" style={{ backgroundColor: '#eceae1' }}>
       {/* Responsive Top Bar */}
-      <div className="bg-primary shadow-2xl relative z-50">
+      <div className="shadow-2xl relative z-50" style={{ backgroundColor: '#6b291c' }}>
         {/* Header Section with Navigation */}
         <div className="px-4 sm:px-6 py-3 lg:py-2">
           <div className="flex items-center justify-between">
@@ -104,7 +115,7 @@ const Layout = ({ children }) => {
                 <h1 className="text-lg sm:text-xl font-bold text-white truncate">
                   Lịch sử Việt Nam
                 </h1>
-                <p className="text-red-200 text-xs sm:text-sm truncate">
+                <p className="text-xs sm:text-sm truncate" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                   Từ Bao cấp đến Đổi mới
                 </p>
               </div>
@@ -134,7 +145,16 @@ const Layout = ({ children }) => {
             {/* Mobile Menu Button - Only visible on mobile */}
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden p-2 rounded-md text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300 transition-colors duration-200"
+              className="lg:hidden p-2 rounded-md text-white transition-colors duration-200"
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(107, 41, 28, 0.8)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+              onFocus={(e) => {
+                e.currentTarget.style.outline = '2px solid rgba(107, 41, 28, 0.5)';
+                e.currentTarget.style.outlineOffset = '2px';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.outline = 'none';
+              }}
               aria-label="Toggle navigation menu"
             >
               <motion.div
@@ -190,7 +210,7 @@ const Layout = ({ children }) => {
                 className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl lg:hidden z-50 overflow-y-auto"
               >
                 {/* Mobile Menu Header */}
-                <div className="bg-primary p-4 flex items-center justify-between">
+                <div className="p-4 flex items-center justify-between" style={{ backgroundColor: '#6b291c' }}>
                   <div className="flex items-center space-x-3">
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Emblem_of_Vietnam.svg" 
@@ -203,7 +223,16 @@ const Layout = ({ children }) => {
                   </div>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-2 rounded-md text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300"
+                    className="p-2 rounded-md text-white transition-colors duration-200"
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(107, 41, 28, 0.8)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                    onFocus={(e) => {
+                      e.currentTarget.style.outline = '2px solid rgba(107, 41, 28, 0.5)';
+                      e.currentTarget.style.outlineOffset = '2px';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.outline = 'none';
+                    }}
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -229,11 +258,26 @@ const Layout = ({ children }) => {
                             to={item.path}
                             className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
                               isActive 
-                                ? 'bg-red-50 text-red-700 border-l-4 border-red-600' 
-                                : 'text-gray-700 hover:bg-gray-50 hover:text-red-600'
+                                ? 'border-l-4' 
+                                : 'text-gray-700 hover:bg-gray-50'
                             }`}
+                            style={isActive ? {
+                              backgroundColor: 'rgba(107, 41, 28, 0.1)',
+                              color: '#6b291c',
+                              borderLeftColor: '#6b291c'
+                            } : {}}
+                            onMouseEnter={(e) => {
+                              if (!isActive) {
+                                e.currentTarget.style.color = '#6b291c';
+                              }
+                            }}
+                            onMouseLeave={(e) => {
+                              if (!isActive) {
+                                e.currentTarget.style.color = '';
+                              }
+                            }}
                           >
-                            <span className={`text-xl ${isActive ? 'text-red-600' : 'text-gray-500'}`}>
+                            <span className="text-xl" style={{ color: isActive ? '#6b291c' : '#6b7280' }}>
                               {item.icon}
                             </span>
                             <span className="font-medium">{item.label}</span>

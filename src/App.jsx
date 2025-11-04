@@ -10,6 +10,7 @@ import TuLieu from './pages/TuLieu'
 import QuizPage from './pages/QuizPage'
 import Aviamasters from './pages/Aviamasters'
 import ChatBox from './components/ChatBox'
+import HoiNhap from './pages/HoiNhap'
 
 const theme = {
   token: {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/" element={<BaoCap />} />
             <Route path="/bao-cap" element={<BaoCap />} />
             <Route path="/doi-moi" element={<DoiMoi />} />
+            <Route path="/hoi-nhap" element={<HoiNhap />} />
             <Route path="/nhan-dinh" element={<NhanDinh />} />
             <Route path="/timeline" element={<Timeline />} />
             <Route path="/tu-lieu" element={<TuLieu />} />

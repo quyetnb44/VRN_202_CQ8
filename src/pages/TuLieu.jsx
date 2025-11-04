@@ -82,7 +82,7 @@ const TuLieu = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto mt-20">
+    <div className="max-w-6xl mx-auto mt-20" style={{ backgroundColor: '#eceae1', minHeight: '100vh', padding: '2rem 0' }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,9 +100,9 @@ const TuLieu = () => {
           transition={{ delay: 0.2 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <Card className="text-center bg-gradient-to-br from-red-50 to-red-100">
-              <div className="text-2xl font-bold text-red-600">6</div>
-              <div className="text-sm text-red-500">Tài liệu</div>
+            <Card className="text-center" style={{ background: 'linear-gradient(to bottom right, rgba(107, 41, 28, 0.1), rgba(107, 41, 28, 0.15))' }}>
+              <div className="text-2xl font-bold" style={{ color: '#6b291c' }}>6</div>
+              <div className="text-sm" style={{ color: '#6b291c' }}>Tài liệu</div>
             </Card>
             <Card className="text-center bg-gradient-to-br from-blue-50 to-blue-100">
               <div className="text-2xl font-bold text-blue-600">3</div>
@@ -141,7 +141,8 @@ const TuLieu = () => {
                       type="primary" 
                       icon={<DownloadOutlined />} 
                       size="small"
-                      className="bg-primary hover:bg-red-700"
+                      className="hover:opacity-90"
+                      style={{ backgroundColor: '#6b291c' }}
                     >
                       Tải xuống
                     </Button>
@@ -191,19 +192,19 @@ const TuLieu = () => {
                 <h5 className="font-semibold mb-3">Trang web chính thức</h5>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6b291c' }}></span>
                     <a href="#" className="text-blue-600 hover:underline text-sm">
                       Cổng thông tin Chính phủ
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6b291c' }}></span>
                     <a href="#" className="text-blue-600 hover:underline text-sm">
                       Tổng cục Thống kê
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6b291c' }}></span>
                     <a href="#" className="text-blue-600 hover:underline text-sm">
                       Viện Lịch sử Đảng
                     </a>

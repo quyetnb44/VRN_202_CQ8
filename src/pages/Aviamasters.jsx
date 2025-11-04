@@ -46,7 +46,7 @@ const Aviamasters = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
+    <div className="min-h-screen py-8 px-4" style={{ backgroundColor: '#eceae1' }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -128,7 +128,7 @@ const Aviamasters = () => {
                 <div>
                   <div className="text-2xl mb-1">🚀</div>
                   <div className="text-sm text-gray-600">Rockets còn lại</div>
-                  <div className="text-xl font-bold text-red-600">
+                  <div className="text-xl font-bold" style={{ color: '#6b291c' }}>
                     {rockets.filter(r => !r.collected).length}
                   </div>
                 </div>

@@ -164,12 +164,10 @@ const GameCanvas = ({ plane, multipliers, rockets, phase }) => {
           style={{
             left: `${plane.x * 100}%`,
             top: `${plane.y * 100}%`,
-            transform: 'translate(-50%, -50%)',
-            rotate: plane.vy > 0 ? 15 : plane.vy < 0 ? -15 : 0
+            transform: 'translate(-50%, -50%)'
           }}
           animate={{
-            y: plane.y * 100 + '%',
-            rotate: plane.vy > 0 ? 20 : plane.vy < 0 ? -20 : 0
+            rotate: plane.vy > 0 ? -20 : plane.vy < 0 ? 20 : 0
           }}
           transition={{
             type: "spring",

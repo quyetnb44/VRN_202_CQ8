@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Tooltip, Image } from 'antd'
 import { motion } from 'framer-motion'
-import { MessageOutlined, CalendarOutlined, EnvironmentOutlined, ShoppingOutlined, HomeOutlined, BarChartOutlined, FlagOutlined, ExclamationCircleOutlined, TrophyOutlined } from '@ant-design/icons'
+import { MessageOutlined, CalendarOutlined, EnvironmentOutlined, ShoppingOutlined, HomeOutlined, BarChartOutlined, FlagOutlined, ExclamationCircleOutlined, TrophyOutlined, DownloadOutlined } from '@ant-design/icons'
 
 const BaoCap = () => {
   const fadeInUp = {
@@ -19,7 +19,7 @@ const BaoCap = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+    <div className="min-h-screen" style={{ backgroundColor: '#eceae1' }}>
       <div className="max-w-7xl mx-auto px-4 py-8">
         
         {/* Hero Section */}
@@ -30,7 +30,7 @@ const BaoCap = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="relative">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600 mb-8">
+            <h1 className="text-5xl md:text-6xl font-bold mb-8" style={{ color: '#6b291c' }}>
               Thời kì Bao cấp
             </h1>
             <div className="text-2xl md:text-3xl text-gray-600 mb-8 font-light">
@@ -77,17 +77,17 @@ const BaoCap = () => {
         >
           <motion.div variants={fadeInUp}>
             <div className="flex items-center mb-8">
-              <CalendarOutlined className="text-3xl text-red-600 mr-4" />
+              <CalendarOutlined className="text-3xl mr-4" style={{ color: '#6b291c' }} />
               <h2 className="text-4xl font-bold text-gray-800">Bối cảnh sau 1975</h2>
             </div>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8">
             <motion.div variants={fadeInUp}>
-              <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-red-500">
+              <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4" style={{ borderLeftColor: '#6b291c' }}>
                 <div className="space-y-6">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-lg text-red-800 mb-3">Tình hình đất nước</h3>
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(107, 41, 28, 0.1)' }}>
+                    <h3 className="font-semibold text-lg mb-3" style={{ color: '#6b291c' }}>Tình hình đất nước</h3>
                     <ul className="space-y-2 text-gray-700">
                       <li>• Sau hơn 20 năm chiến tranh liên miên, đất nước bị tàn phá nặng nề</li>
                       <li>• Cơ sở hạ tầng hầu như kiệt quệ, sản xuất đình đốn</li>
@@ -184,9 +184,9 @@ const BaoCap = () => {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="h-full text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-red-50 to-red-100 border-red-200">
+              <Card className="h-full text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2" style={{ background: 'linear-gradient(to bottom right, rgba(107, 41, 28, 0.1), rgba(107, 41, 28, 0.15))', borderColor: 'rgba(107, 41, 28, 0.3)' }}>
                 <div className="text-4xl mb-4">🚫</div>
-                <h3 className="font-bold text-lg mb-3 text-red-800">Hạn chế tư nhân</h3>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#6b291c' }}>Hạn chế tư nhân</h3>
                 <p className="text-sm text-gray-700">Công-thương nghiệp miền Nam bị cải tạo về quốc doanh hoặc tập thể</p>
               </Card>
             </motion.div>
@@ -265,7 +265,7 @@ const BaoCap = () => {
                     <p className="text-gray-700">Để tồn tại, người dân phải trồng thêm rau, nuôi gà, heo, buôn bán nhỏ lẻ</p>
                   </div>
                   
-                  <div className="bg-red-50 p-4 rounded-lg">
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(107, 41, 28, 0.1)' }}>
                     <h4 className="font-semibold mb-2">🖤 Chợ đen</h4>
                     <p className="text-gray-700">Hàng hóa được bán ngoài luồng với giá cao gấp nhiều lần giá chính thức</p>
                   </div>
@@ -377,8 +377,8 @@ const BaoCap = () => {
                   <h3 className="font-bold text-xl text-green-800">Nông nghiệp</h3>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-red-800 mb-2">1976–1986</h4>
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(107, 41, 28, 0.1)' }}>
+                    <h4 className="font-semibold mb-2" style={{ color: '#6b291c' }}>1976–1986</h4>
                     <p className="text-sm text-gray-700">Sản lượng lúa bình quân chỉ <strong>13,4 triệu tấn/năm</strong>, không đủ ăn, phải nhập khẩu gạo</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
@@ -414,8 +414,8 @@ const BaoCap = () => {
                   <h3 className="font-bold text-xl text-orange-800">Thương mại</h3>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-red-800 mb-2">Mất cân bằng</h4>
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(107, 41, 28, 0.1)' }}>
+                    <h4 className="font-semibold mb-2" style={{ color: '#6b291c' }}>Mất cân bằng</h4>
                     <p className="text-sm text-gray-700">Tỷ lệ nhập siêu so với xuất khẩu lên đến <strong>360%</strong></p>
                   </div>
                   <div className="bg-orange-50 p-4 rounded-lg">
@@ -480,7 +480,7 @@ const BaoCap = () => {
         >
           <motion.div variants={fadeInUp}>
             <div className="flex items-center justify-center mb-12">
-              <FlagOutlined className="text-3xl text-red-600 mr-4" />
+              <FlagOutlined className="text-3xl mr-4" style={{ color: '#6b291c' }} />
               <h2 className="text-4xl font-bold text-gray-800">Chính trị – Quốc phòng</h2>
             </div>
           </motion.div>
@@ -488,7 +488,7 @@ const BaoCap = () => {
           {/* Vertical Timeline */}
           <div className="relative max-w-6xl mx-auto">
             {/* Center timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-red-500 via-orange-500 to-yellow-500 h-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full" style={{ background: 'linear-gradient(to bottom, #6b291c, #f59e0b, #eab308)' }}></div>
 
             {/* Timeline Events */}
             <div className="space-y-16">
@@ -496,7 +496,7 @@ const BaoCap = () => {
               {/* 1976 - Đổi tên nước */}
               <motion.div variants={fadeInUp} className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
-                  <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-r from-red-50 to-red-100 border-red-200">
+                  <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300" style={{ background: 'linear-gradient(to right, rgba(107, 41, 28, 0.1), rgba(107, 41, 28, 0.15))', borderColor: 'rgba(107, 41, 28, 0.3)' }}>
                     <div className="text-center">
                       <div className="w-full h-full mx-auto rounded-lg overflow-hidden shadow-md mb-4">
                         <Image
@@ -506,8 +506,8 @@ const BaoCap = () => {
                         />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-red-800 mb-2">1976</h3>
-                        <h4 className="text-lg font-semibold text-red-700 mb-3">Đổi tên nước</h4>
+                        <h3 className="text-xl font-bold mb-2" style={{ color: '#6b291c' }}>1976</h3>
+                        <h4 className="text-lg font-semibold mb-3" style={{ color: '#6b291c' }}>Đổi tên nước</h4>
                         <p className="text-sm text-gray-700">
                           Quốc hội khóa VI quyết định đổi tên nước thành <strong>Cộng hòa Xã hội Chủ nghĩa Việt Nam</strong>
                         </p>
@@ -517,7 +517,7 @@ const BaoCap = () => {
                 </div>
                 
                 {/* Center dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-red-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-white shadow-lg z-10" style={{ backgroundColor: '#6b291c' }}></div>
                 
                 <div className="w-1/2 pl-8"></div>
               </motion.div>
@@ -651,21 +651,21 @@ const BaoCap = () => {
         >
           <motion.div variants={fadeInUp}>
             <div className="flex items-center mb-8">
-              <ExclamationCircleOutlined className="text-3xl text-red-600 mr-4" />
+              <ExclamationCircleOutlined className="text-3xl mr-4" style={{ color: '#6b291c' }} />
               <h2 className="text-4xl font-bold text-gray-800">Hạn chế và nguyên nhân</h2>
             </div>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
             <motion.div variants={fadeInUp}>
-              <Card className="h-full shadow-lg border-l-4 border-red-500">
+              <Card className="h-full shadow-lg border-l-4" style={{ borderLeftColor: '#6b291c' }}>
                 <div className="text-center mb-4">
                   <div className="text-4xl mb-2">⚠️</div>
-                  <h3 className="font-bold text-xl text-red-800">Hạn chế</h3>
+                  <h3 className="font-bold text-xl" style={{ color: '#6b291c' }}>Hạn chế</h3>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-red-800 mb-2">📉 Kinh tế trì trệ</h4>
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(107, 41, 28, 0.1)' }}>
+                    <h4 className="font-semibold mb-2" style={{ color: '#6b291c' }}>📉 Kinh tế trì trệ</h4>
                     <p className="text-sm text-gray-700">Nền kinh tế rơi vào khủng hoảng kéo dài</p>
                   </div>
                   
@@ -711,7 +711,7 @@ const BaoCap = () => {
           <motion.div variants={fadeInUp} className="text-center">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-md mx-auto">
               <Image
-                src="https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/497858433_1112386797587726_7388083362950169530_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=J2HhD2FjuUkQ7kNvwEF_1Ie&_nc_oc=Admy0-pxxvGJqF4c02_mtBv0eaQ7v-x4uSwNLg_Te3fhh1ncOi0T-eQe9-dOal8jddw&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=mWSVfjExmJ2ulAfUZqvfYw&oh=00_AfV0u039Fw0ScGe21Hnx7YLx5VrcAWppN6IHdnEXnuBF8Q&oe=68B24A7D"
+                src="https://cdn2.tuoitre.vn/471584752817336320/2023/3/29/vietnam-30-dong-1985-a-read-only-16800564343621326660652.jpg"
                 alt="Tiền giấy 30 đồng"
                 className="w-full h-48 object-cover"
               />
@@ -786,7 +786,7 @@ const BaoCap = () => {
           </div>
 
           <motion.div variants={fadeInUp}>
-            <div className="bg-gradient-to-r from-red-600 to-yellow-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+            <div className="rounded-2xl p-8 text-white text-center shadow-2xl" style={{ background: 'linear-gradient(to right, #6b291c, #eab308)' }}>
               <h3 className="text-2xl font-bold mb-4">Đại hội VI - Bước ngoặt lịch sử</h3>
               <p className="text-lg mb-6 opacity-90">
                 Từ những khó khăn của thời kỳ bao cấp, Đảng và nhân dân Việt Nam đã rút ra bài học quý báu, 
@@ -822,6 +822,218 @@ const BaoCap = () => {
                 </div>
               </div>
             </div>
+          </motion.div>
+        </motion.section>
+
+        {/* Bối cảnh và tự phê bình Đại hội VI */}
+        <motion.section
+          className="mb-16"
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.div variants={fadeInUp}>
+            <div className="flex items-center mb-8">
+              <ExclamationCircleOutlined className="text-3xl mr-4" style={{ color: '#6b291c' }} />
+              <h2 className="text-4xl font-bold text-gray-800">Bối cảnh và tự phê bình Đại hội VI</h2>
+            </div>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-8">
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full shadow-lg border-l-4" style={{ borderLeftColor: '#6b291c' }}>
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">📅</div>
+                  <h3 className="font-bold text-xl" style={{ color: '#6b291c' }}>Bối cảnh Đại hội VI</h3>
+                  <p className="text-sm text-gray-600 mt-2">Tháng 12/1986</p>
+                </div>
+                <div className="space-y-4">
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(107, 41, 28, 0.1)' }}>
+                    <h4 className="font-semibold mb-2" style={{ color: '#6b291c' }}>🔥 Khủng hoảng trầm trọng</h4>
+                    <p className="text-sm text-gray-700">Đất nước lâm vào khủng hoảng trầm trọng, thực tiễn "xé rào" đã chín muồi</p>
+                  </div>
+                  
+                  <div className="bg-orange-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-orange-800 mb-2">💡 Thực tiễn "xé rào"</h4>
+                    <p className="text-sm text-gray-700">Những thực tiễn "xé rào" đã chứng minh tính đúng đắn của việc cần thay đổi</p>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full shadow-lg border-l-4 border-orange-500">
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">🔍</div>
+                  <h3 className="font-bold text-xl text-orange-800">Tự phê bình sâu sắc</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-orange-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-orange-800 mb-2">🎯 Thừa nhận sai lầm</h4>
+                    <p className="text-sm text-gray-700">Đại hội đã tự phê bình sâu sắc, thừa nhận những <strong>sai lầm nghiêm trọng</strong> trong tư duy và chính sách</p>
+                  </div>
+                  
+                  <div className="bg-yellow-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-yellow-800 mb-2">📝 Đánh giá thẳng thắn</h4>
+                    <p className="text-sm text-gray-700">Sự thẳng thắn trong đánh giá thể hiện tinh thần đổi mới và dũng khí của Đảng</p>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+
+          <motion.div variants={fadeInUp}>
+            <Card className="shadow-lg border-l-4" style={{ borderLeftColor: '#6b291c', background: 'linear-gradient(to right, rgba(107, 41, 28, 0.1), rgba(251, 146, 60, 0.1))' }}>
+              <div className="text-center mb-6">
+                <div className="text-4xl mb-3">⚠️</div>
+                <h3 className="font-bold text-2xl mb-2" style={{ color: '#6b291c' }}>Nguyên nhân sai lầm</h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white/70 p-5 rounded-lg shadow-md">
+                  <h4 className="font-semibold text-lg mb-3" style={{ color: '#6b291c' }}>🧠 Bệnh chủ quan, duy ý chí</h4>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    Đại hội chỉ rõ nguyên nhân là <strong>"bệnh chủ quan, duy ý chí, vi phạm các quy luật khách quan"</strong>
+                  </p>
+                </div>
+                
+                <div className="bg-white/70 p-5 rounded-lg shadow-md">
+                  <h4 className="font-semibold text-lg text-orange-800 mb-3">📋 Sao chép máy móc</h4>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    <strong>"Sao chép máy móc"</strong> mô hình Xô-viết mà không phù hợp với điều kiện thực tế của Việt Nam
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+        </motion.section>
+
+        {/* Đường lối Đổi Mới */}
+        <motion.section
+          className="mb-16"
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.div variants={fadeInUp}>
+            <div className="flex items-center mb-8">
+              <TrophyOutlined className="text-3xl text-green-600 mr-4" />
+              <h2 className="text-4xl font-bold text-gray-800">Đường lối Đổi Mới</h2>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeInUp} className="mb-8">
+            <Card className="shadow-lg border-l-4 border-green-500 bg-gradient-to-r from-green-50 to-blue-50">
+              <div className="text-center mb-6">
+                <div className="text-5xl mb-3">🚀</div>
+                <h3 className="font-bold text-2xl text-green-800 mb-2">Đổi mới toàn diện</h3>
+                <p className="text-lg text-gray-700">Trọng tâm là <strong>đổi mới tư duy kinh tế</strong></p>
+              </div>
+            </Card>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-6 mb-8">
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4" style={{ borderLeftColor: '#6b291c' }}>
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">🚫</div>
+                  <h3 className="font-bold text-lg" style={{ color: '#6b291c' }}>Xóa bỏ cơ chế cũ</h3>
+                </div>
+                <div className="bg-red-50 p-4 rounded-lg">
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    Xóa bỏ cơ chế <strong>kế hoạch hóa tập trung, quan liêu, bao cấp</strong>
+                  </p>
+                </div>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-green-500">
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">💎</div>
+                  <h3 className="font-bold text-lg text-green-800">Kinh tế nhiều thành phần</h3>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <p className="text-sm text-gray-700 leading-relaxed mb-2">
+                    Thừa nhận sự tồn tại khách quan của <strong>kinh tế hàng hóa nhiều thành phần</strong>
+                  </p>
+                  <p className="text-xs text-green-700 font-semibold mt-2">
+                    ✨ Đây là một đột phá về lý luận
+                  </p>
+                </div>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-500">
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">⚖️</div>
+                  <h3 className="font-bold text-lg text-blue-800">Cơ chế thị trường</h3>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p className="text-sm text-gray-700 leading-relaxed mb-2">
+                    Chuyển sang vận hành theo <strong>cơ chế thị trường</strong> có sự quản lý của Nhà nước bằng pháp luật, kế hoạch, chính sách...
+                  </p>
+                  <p className="text-xs text-blue-700 font-semibold mt-2">
+                    🎯 Đây là một quyết định lịch sử, mang tính cách mạng
+                  </p>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+
+          <motion.div variants={fadeInUp}>
+            <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 rounded-2xl p-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <div className="text-5xl mb-4">💫</div>
+                <h3 className="text-2xl font-bold mb-4">Đổi mới tư duy căn bản</h3>
+                <p className="text-lg mb-6 opacity-95 leading-relaxed">
+                  Đây không chỉ là sự thay đổi chính sách, mà là một sự <strong>"đổi mới tư duy"</strong> căn bản, 
+                  mở đường cho đất nước thoát khỏi khủng hoảng
+                </p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">📜</div>
+                  <blockquote className="text-xl md:text-2xl italic font-semibold leading-relaxed mb-4">
+                    "Nhìn thẳng vào sự thật, nói rõ sự thật, đánh giá đúng sự thật."
+                  </blockquote>
+                  <p className="text-sm opacity-90">
+                    Trích tinh thần chỉ đạo của Đại hội VI, thể hiện dũng khí đổi mới tư duy, phê phán sai lầm cũ
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        {/* Khám phá thêm */}
+        <motion.section
+          className="mb-16"
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.div variants={fadeInUp} className="text-center">
+            <Card className="shadow-xl border" style={{ backgroundColor: '#6b291c', color: '#fbbf24', borderColor: '#6b291c' }}>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-6">Khám phá thêm về Giai đoạn Bao cấp (1975-1986)</h3>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      window.open('https://heyzine.com/flip-book/f6b0c092f3.html', '_blank');
+                    }}
+                    className="bg-gradient-to-r from-yellow-300 to-orange-400 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center cursor-pointer"
+                    style={{ color: '#6b291c' }}
+                  >
+                    <DownloadOutlined className="mr-2" />
+                    Xem báo cáo chi tiết CQ7
+                  </motion.button>
+                </div>
+              </div>
+            </Card>
           </motion.div>
         </motion.section>
 
