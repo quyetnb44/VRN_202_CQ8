@@ -1,279 +1,514 @@
-import React, { useState } from 'react'
-import { Card, Button, Select, Divider } from 'antd'
-import { motion, AnimatePresence } from 'framer-motion'
-import Quiz from '../components/Quiz'
+import React, { useState } from "react";
+import { Card, Button, Select, Divider } from "antd";
+import { motion, AnimatePresence } from "framer-motion";
+import Quiz from "../components/Quiz";
 
 const QuizPage = () => {
-  const [selectedQuiz, setSelectedQuiz] = useState('baocap')
+  const [selectedQuiz, setSelectedQuiz] = useState("hoiNhapContext");
 
   const quizzes = {
-    baocap: {
-      title: "Thời kì Bao cấp (1975-1986)",
-      icon: "🎫",
+    hoiNhapContext: {
+      title: "Bối cảnh và yêu cầu hội nhập sau Đổi mới",
+      icon: "🌏",
       questions: [
         {
-          question: "Đặc trưng nổi bật của thời kì bao cấp là gì?",
-          options: ["Kinh tế thị trường tự do", "Hệ thống tem phiếu và sổ gạo", "Đầu tư nước ngoài mạnh mẽ", "Xuất khẩu hàng hóa phong phú"],
+          question:
+            "Sau 10 năm Đổi mới (1986–1996), Việt Nam đã thoát khỏi tình trạng gì?",
+          options: [
+            "Khủng hoảng chính trị",
+            "Khủng hoảng kinh tế – xã hội kéo dài",
+            "Chiến tranh biên giới",
+            "Suy thoái văn hóa",
+          ],
           correctAnswer: 1,
-          explanation: "Thời kì bao cấp được đặc trưng bởi hệ thống phân phối theo tem phiếu và sổ gạo, phản ánh tình trạng thiếu hụt hàng hóa và cơ chế quản lý tập trung."
+          explanation:
+            "Đến năm 1996, Việt Nam cơ bản thoát khỏi khủng hoảng kinh tế – xã hội, tạo thế và lực mới cho phát triển.",
         },
         {
-          question: "Thời kỳ bao cấp ở Việt Nam kéo dài từ năm nào đến năm nào?",
-          options: ["1975-1986", "1976-1985", "1975-1990", "1980-1986"],
+          question:
+            "Đặc điểm nổi bật của kinh tế Việt Nam giai đoạn 1986–1996 là:",
+          options: [
+            "Phát triển công nghiệp nặng vượt trội",
+            "Phụ thuộc hoàn toàn vào viện trợ nước ngoài",
+            "Tăng trưởng liên tục và đời sống nhân dân được cải thiện",
+            "Giảm phát trầm trọng",
+          ],
+          correctAnswer: 2,
+          explanation:
+            "Kinh tế tăng trưởng liên tục, đời sống nhân dân được cải thiện, chính trị – xã hội ổn định.",
+        },
+        {
+          question:
+            "Một thách thức lớn của Việt Nam khi bước vào giai đoạn 1996 là:",
+          options: [
+            "Thiếu nguồn lao động",
+            "Khoảng cách tụt hậu so với khu vực còn lớn",
+            "Thừa vốn đầu tư trong nước",
+            "Cạnh tranh khoa học – công nghệ yếu",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Việt Nam vẫn là nước đang phát triển, cơ sở vật chất kỹ thuật yếu và tụt hậu so với khu vực.",
+        },
+        {
+          question: "Xu thế chủ đạo của thế giới cuối thế kỷ XX là:",
+          options: [
+            "Chiến tranh lạnh trở lại",
+            "Toàn cầu hóa và khu vực hóa kinh tế",
+            "Chủ nghĩa bảo hộ kinh tế",
+            "Tự cô lập các quốc gia",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Toàn cầu hóa và khu vực hóa là xu thế nổi bật của thời kỳ này.",
+        },
+        {
+          question: "Theo Đại hội VIII, để phát triển đất nước cần kết hợp:",
+          options: [
+            "Dựa vào nguồn lực nước ngoài là chính",
+            "Độc lập, tự chủ gắn với hợp tác quốc tế",
+            "Hội nhập bằng mọi giá",
+            "Đóng cửa để tự phát triển",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Đại hội VIII nhấn mạnh: Giữ vững độc lập, tự chủ đi đôi với mở rộng hợp tác quốc tế.",
+        },
+        {
+          question: "Hội nhập quốc tế được xem là:",
+          options: [
+            "Nhu cầu chủ quan của Đảng",
+            "Yêu cầu khách quan của quá trình phát triển",
+            "Hệ quả tất yếu của chiến tranh",
+            "Lựa chọn tạm thời",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Hội nhập là yêu cầu khách quan trong bối cảnh toàn cầu hóa mạnh mẽ.",
+        },
+        {
+          question:
+            "Một trong những động lực nội tại của Việt Nam sau 10 năm đổi mới là:",
+          options: [
+            "Ổn định chính trị – xã hội",
+            "Khủng hoảng kinh tế",
+            "Tăng nhập siêu",
+            "Suy thoái văn hóa",
+          ],
           correctAnswer: 0,
-          explanation: "Thời kỳ bao cấp chính thức từ 1975 (sau thống nhất) đến 1986 (Đại hội VI khởi động Đổi mới)."
+          explanation:
+            "Ổn định chính trị – xã hội giúp Việt Nam tự tin bước vào hội nhập.",
         },
         {
-          question: "Nguyên nhân chính dẫn đến khủng hoảng kinh tế cuối thập niên 1970?",
-          options: ["Chiến tranh biên giới", "Lạm phát cao", "Thiên tai", "Tất cả các yếu tố trên"],
-          correctAnswer: 3,
-          explanation: "Khủng hoảng do nhiều nguyên nhân: chiến tranh biên giới với Trung Quốc và Campuchia, lạm phát 3 chữ số, thiên tai và cơ chế quản lý tập trung."
-        },
-        {
-          question: "Tỷ lệ lạm phát cao nhất trong thời kỳ bao cấp là bao nhiêu?",
-          options: ["50%", "100%", "Trên 400%", "200%"],
-          correctAnswer: 2,
-          explanation: "Lạm phát đạt đỉnh điểm trên 400% vào đầu thập niên 1980, gây khó khăn nghiêm trọng cho đời sống nhân dân."
-        },
-        {
-          question: "Hệ thống phân phối trong thời kỳ bao cấp dựa trên nguyên tắc nào?",
-          options: ["Theo năng lực", "Theo nhu cầu", "Theo tem phiếu", "Theo thị trường"],
-          correctAnswer: 2,
-          explanation: "Hệ thống phân phối dựa trên tem phiếu, sổ gạo với định lượng cố định cho từng người, không theo cơ chế thị trường."
-        },
-        {
-          question: "Định lượng gạo bình quân mỗi người/tháng trong thời kỳ bao cấp là bao nhiêu?",
-          options: ["10-12 kg", "13-15 kg", "16-18 kg", "20-22 kg"],
+          question:
+            "Tổ chức nào Việt Nam gia nhập đầu tiên trong tiến trình hội nhập?",
+          options: ["APEC", "ASEAN", "WTO", "EU"],
           correctAnswer: 1,
-          explanation: "Định lượng gạo khoảng 13-15 kg/người/tháng, không đủ đáp ứng nhu cầu dinh dưỡng cơ bản."
+          explanation:
+            "Việt Nam gia nhập ASEAN năm 1995, mở đầu giai đoạn hội nhập khu vực.",
         },
         {
-          question: "Tình trạng kinh tế Việt Nam trước Đổi mới 1986 được mô tả như thế nào?",
-          options: ["Phát triển ổn định", "Khủng hoảng toàn diện", "Tăng trưởng chậm", "Lạm phát nhẹ"],
+          question: "Hội nhập quốc tế của Việt Nam nhằm mục tiêu cơ bản là:",
+          options: [
+            "Tăng cường sức mạnh quân sự",
+            "Phát triển kinh tế, nâng cao đời sống nhân dân",
+            "Giành lại thị trường nội địa",
+            "Cạnh tranh với các nước lớn",
+          ],
           correctAnswer: 1,
-          explanation: "Kinh tế rơi vào khủng hoảng toàn diện với lạm phát cao, thiếu hụt hàng hóa, đời sống nhân dân khó khăn."
+          explanation:
+            "Hội nhập nhằm thúc đẩy kinh tế, nâng cao đời sống và vị thế quốc gia.",
         },
         {
-          question: "Ngành nào chiếm tỷ trọng lớn nhất trong nền kinh tế thời bao cấp?",
-          options: ["Công nghiệp", "Nông nghiệp", "Dịch vụ", "Thương mại"],
+          question: "Tư tưởng 'dựa vào nội lực là chính' thể hiện:",
+          options: [
+            "Tư duy phụ thuộc",
+            "Tinh thần độc lập, tự chủ trong hội nhập",
+            "Hạn chế mở cửa",
+            "Chính sách cô lập",
+          ],
           correctAnswer: 1,
-          explanation: "Nông nghiệp chiếm tỷ trọng lớn nhất nhưng năng suất thấp, không đáp ứng được nhu cầu lương thực."
+          explanation:
+            "Đây là nguyên tắc cốt lõi giúp Việt Nam hội nhập mà vẫn giữ bản lĩnh độc lập.",
         },
-        {
-          question: "Chính sách 'khoán 10' được thực hiện vào năm nào?",
-          options: ["1979", "1981", "1983", "1985"],
-          correctAnswer: 1,
-          explanation: "Chính sách 'khoán 10' năm 1981 cho phép nông dân được khoán sản phẩm, bước đầu cải cách nông nghiệp."
-        },
-        {
-          question: "Tỷ lệ nghèo của Việt Nam vào cuối thời kỳ bao cấp (1986) là bao nhiêu?",
-          options: ["Khoảng 40%", "Khoảng 50%", "Khoảng 60%", "Trên 70%"],
-          correctAnswer: 3,
-          explanation: "Tỷ lệ nghèo trên 70% dân số vào năm 1986, phản ánh tình trạng kinh tế khó khăn nghiêm trọng."
-        }
-      ]
+      ],
     },
-    doimoi: {
-      title: "Thành tựu Đổi mới (1986 - nay)",
-      icon: "📊",
+    hoiNhapPolicy: {
+      title: "Đường lối và chính sách hội nhập 1996–2005",
+      icon: "🏛️",
       questions: [
         {
-          question: "Đổi mới kinh tế Việt Nam bắt đầu từ năm nào?",
-          options: ["1975", "1986", "1990", "1995"],
+          question:
+            "Đại hội VIII (1996) đánh dấu Việt Nam bước vào giai đoạn nào?",
+          options: [
+            "Ổn định chính trị sau chiến tranh",
+            "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
+            "Tập trung xây dựng nông nghiệp",
+            "Phát triển kinh tế tự cung tự cấp",
+          ],
           correctAnswer: 1,
-          explanation: "Đại hội VI của Đảng (12/1986) đã chính thức khởi động chính sách Đổi mới, chuyển từ kinh tế kế hoạch hóa tập trung sang kinh tế thị trường định hướng xã hội chủ nghĩa."
+          explanation:
+            "Đại hội VIII mở ra thời kỳ đẩy mạnh công nghiệp hóa, hiện đại hóa.",
         },
         {
-          question: "GDP của Việt Nam năm 2024 đạt mức tăng trưởng bao nhiêu?",
-          options: ["6.2%", "7.09%", "8.1%", "5.8%"],
+          question: "Đại hội VIII xác định mục tiêu đến năm 2020:",
+          options: [
+            "Trở thành nước phát triển",
+            "Cơ bản trở thành nước công nghiệp theo hướng hiện đại",
+            "Tham gia WTO",
+            "Xóa bỏ kinh tế thị trường",
+          ],
           correctAnswer: 1,
-          explanation: "Theo Tổng cục Thống kê, GDP Việt Nam năm 2024 tăng 7.09%, vượt mục tiêu đề ra và thuộc nhóm tăng trưởng cao nhất khu vực."
+          explanation:
+            "Mục tiêu chiến lược là công nghiệp hóa – hiện đại hóa đến 2020.",
         },
         {
-          question: "Việt Nam gia nhập WTO vào năm nào?",
-          options: ["2005", "2006", "2007", "2008"],
+          question: "Việt Nam gia nhập APEC vào năm nào?",
+          options: ["1996", "1998", "2001", "2005"],
+          correctAnswer: 1,
+          explanation:
+            "Việt Nam chính thức trở thành thành viên APEC năm 1998.",
+        },
+        {
+          question: "Chính sách kinh tế của Đại hội VIII nhấn mạnh:",
+          options: [
+            "Kinh tế kế hoạch hóa tập trung",
+            "Kinh tế hàng hóa nhiều thành phần theo cơ chế thị trường có quản lý",
+            "Tự cung tự cấp",
+            "Tư hữu hóa toàn bộ nền kinh tế",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Đây là mô hình phù hợp để hội nhập mà vẫn giữ định hướng XHCN.",
+        },
+        {
+          question:
+            "Bài học thứ năm trong 10 năm đổi mới mà Đại hội VIII nêu ra là:",
+          options: [
+            "Đẩy mạnh cải cách hành chính",
+            "Mở rộng hợp tác quốc tế, kết hợp sức mạnh dân tộc với sức mạnh thời đại",
+            "Chú trọng giáo dục phổ thông",
+            "Phát triển nông nghiệp toàn diện",
+          ],
+          correctAnswer: 1,
+          explanation: "Bài học này là nền tảng của tư duy hội nhập chủ động.",
+        },
+        {
+          question: "Hiệp định Thương mại Việt Nam – Hoa Kỳ được ký vào năm:",
+          options: ["1998", "1999", "2000", "2002"],
           correctAnswer: 2,
-          explanation: "Việt Nam chính thức gia nhập WTO vào ngày 11/1/2007, đánh dấu bước ngoặt quan trọng trong hội nhập kinh tế quốc tế."
+          explanation:
+            "Hiệp định được ký năm 2000, mở ra cơ hội lớn cho thương mại song phương.",
         },
         {
-          question: "Thu nhập bình quân đầu người của Việt Nam năm 2024 là bao nhiêu?",
-          options: ["3,800 USD", "4,500 USD", "5,200 USD", "3,200 USD"],
+          question:
+            "Chiến lược phát triển kinh tế – xã hội 2001–2010 do Đại hội IX thông qua nhằm:",
+          options: [
+            "Tập trung vào nông nghiệp",
+            "Đưa Việt Nam ra khỏi tình trạng kém phát triển và tạo nền tảng công nghiệp hóa",
+            "Giảm tốc độ tăng trưởng để ổn định",
+            "Tập trung vào thương mại dịch vụ",
+          ],
           correctAnswer: 1,
-          explanation: "Theo World Bank, thu nhập bình quân đầu người Việt Nam đạt khoảng 4,300 USD năm 2023, tăng gần 60 lần so với 1986."
+          explanation:
+            "Chiến lược này đặt mục tiêu cơ bản công nghiệp hóa đất nước.",
         },
         {
-          question: "Tỷ lệ nghèo đa chiều của Việt Nam năm 2023 là bao nhiêu?",
-          options: ["4.2%", "2.93%", "3.5%", "5.1%"],
-          correctAnswer: 1,
-          explanation: "Theo báo cáo chính thức, tỷ lệ hộ nghèo đa chiều giảm xuống 2.93% năm 2023, giảm mạnh từ 58% năm 1993."
+          question: "Đại hội IX khẳng định mô hình kinh tế tổng quát là:",
+          options: [
+            "Kinh tế tư bản tự do",
+            "Kinh tế kế hoạch hóa tập trung",
+            "Kinh tế thị trường định hướng xã hội chủ nghĩa",
+            "Kinh tế hỗn hợp kiểu phương Tây",
+          ],
+          correctAnswer: 2,
+          explanation:
+            "Đây là bước phát triển mới trong tư duy lý luận của Đảng.",
         },
         {
-          question: "Việt Nam đứng thứ mây trong xuất khẩu gạo thế giới?",
-          options: ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5"],
+          question:
+            "Một trong những hoạt động đối ngoại nổi bật giai đoạn 2001–2005 là:",
+          options: [
+            "Gia nhập WTO",
+            "Chuẩn bị đàm phán gia nhập WTO",
+            "Tham gia Liên minh châu Âu",
+            "Rút khỏi AFTA",
+          ],
           correctAnswer: 1,
-          explanation: "Việt Nam là nước xuất khẩu gạo lớn thứ 3 thế giới với hơn 8.1 triệu tấn năm 2023, sau Ấn Độ và Thái Lan."
+          explanation:
+            "Giai đoạn này Việt Nam tích cực chuẩn bị đàm phán WTO (gia nhập năm 2007).",
         },
         {
-          question: "Tổng kim ngạch xuất nhập khẩu của Việt Nam năm 2024 (11 tháng) đạt bao nhiêu?",
-          options: ["680 tỷ USD", "715.55 tỷ USD", "750 tỷ USD", "650 tỷ USD"],
+          question: "Chủ trương hội nhập của Đại hội IX nhấn mạnh điều gì?",
+          options: [
+            "Hội nhập toàn diện không điều kiện",
+            "Phát huy nội lực, bảo đảm độc lập, tự chủ và định hướng XHCN",
+            "Mở cửa hoàn toàn nền kinh tế",
+            "Phụ thuộc vào vốn FDI",
+          ],
           correctAnswer: 1,
-          explanation: "Theo Tổng cục Hải quan, tổng kim ngạch xuất nhập khẩu 11 tháng 2024 đạt 715.55 tỷ USD, tăng 15.8% so với cùng kỳ."
+          explanation:
+            "Đại hội IX nhấn mạnh hội nhập chủ động nhưng có kiểm soát, giữ vững định hướng XHCN.",
         },
-        {
-          question: "Việt Nam gia nhập ASEAN vào năm nào?",
-          options: ["1994", "1995", "1996", "1997"],
-          correctAnswer: 1,
-          explanation: "Việt Nam chính thức gia nhập ASEAN vào ngày 28/7/1995, trở thành thành viên thứ 7 của tổ chức này."
-        },
-        {
-          question: "Vốn FDI cam kết vào Việt Nam năm 2024 đạt mức bao nhiêu?",
-          options: ["22.4 tỷ USD", "25.35 tỷ USD", "28.1 tỷ USD", "20.8 tỷ USD"],
-          correctAnswer: 1,
-          explanation: "Theo Bộ Kế hoạch và Đầu tư, vốn FDI cam kết năm 2024 đạt 25.35 tỷ USD, tăng 1.9% so với năm 2023."
-        },
-        {
-          question: "Hiệp định EVFTA giữa Việt Nam và EU có hiệu lực từ năm nào?",
-          options: ["2019", "2020", "2021", "2018"],
-          correctAnswer: 1,
-          explanation: "Hiệp định Thương mại Tự do Việt Nam-EU (EVFTA) có hiệu lực từ 1/8/2020, mở ra cơ hội xuất khẩu lớn vào thị trường EU."
-        }
-      ]
+      ],
     },
-    nhandinh: {
-      title: "Thành tựu Việt Nam sau gần 40 năm Đổi mới",
-      icon: "🇻🇳",
+    hoiNhapTuChu: {
+      title: "Hội nhập mà vẫn giữ độc lập, tự chủ",
+      icon: "🕊️",
       questions: [
         {
-          question: "Thu nhập bình quân đầu người của Việt Nam năm 2024 đạt mức nào?",
-          options: ["Khoảng 2,500 USD", "Khoảng 4,500 USD", "Khoảng 6,000 USD", "Khoảng 3,800 USD"],
+          question:
+            "Đường lối đối ngoại của Việt Nam trong thời kỳ hội nhập là:",
+          options: [
+            "Phụ thuộc vào các nước lớn",
+            "Độc lập, tự chủ, hòa bình, hợp tác và phát triển",
+            "Chính sách đóng cửa",
+            "Theo mô hình của Mỹ",
+          ],
           correctAnswer: 1,
-          explanation: "Theo World Bank, thu nhập bình quân đầu người của Việt Nam đạt khoảng 4,300 USD năm 2023, tăng gần 60 lần so với năm 1986."
+          explanation:
+            "Đây là phương châm xuyên suốt, bảo đảm chủ quyền và lợi ích quốc gia.",
         },
         {
-          question: "Việt Nam trở thành đối tác BRICS vào thời gian nào?",
-          options: ["Tháng 1/2025", "Tháng 6/2025", "Tháng 12/2024", "Tháng 3/2025"],
+          question:
+            "Phát huy nội lực đồng thời tranh thủ nguồn lực bên ngoài thể hiện:",
+          options: [
+            "Tư tưởng tự cung tự cấp",
+            "Quan điểm độc lập tự chủ kết hợp hội nhập",
+            "Chiến lược hướng nội thuần túy",
+            "Chính sách bảo hộ",
+          ],
           correctAnswer: 1,
-          explanation: "Việt Nam chính thức trở thành đối tác BRICS từ tháng 6/2025, nâng tầm hợp tác kinh tế và ngoại giao quốc tế."
+          explanation: "Đây là cách kết hợp linh hoạt giữa tự chủ và hội nhập.",
         },
         {
-          question: "BRICS+ hiện chiếm bao nhiêu phần trăm GDP toàn cầu?",
-          options: ["40%", "44%", "48%", "52%"],
+          question: "Đại hội IX khẳng định Việt Nam là:",
+          options: [
+            "Đối tác phụ thuộc của các nước phát triển",
+            "Bạn và đối tác tin cậy của các nước trong cộng đồng quốc tế",
+            "Thành viên trung lập của Liên Hợp Quốc",
+            "Quốc gia tự cô lập",
+          ],
           correctAnswer: 1,
-          explanation: "BRICS+ hiện chiếm 44% GDP toàn cầu và 56% dân số thế giới, tạo ra khối kinh tế khổng lồ."
+          explanation:
+            "Thể hiện vị thế chủ động, bình đẳng trong quan hệ quốc tế.",
         },
         {
-          question: "Tuổi thọ trung bình của người Việt Nam năm 2023 là bao nhiêu?",
-          options: ["72.8 tuổi", "74.5 tuổi", "76.2 tuổi", "73.1 tuổi"],
+          question: "Độc lập tự chủ về kinh tế là nền tảng của:",
+          options: [
+            "Tự do văn hóa",
+            "Độc lập về chính trị",
+            "Mở rộng thị trường",
+            "Hội nhập toàn cầu",
+          ],
           correctAnswer: 1,
-          explanation: "Tuổi thọ trung bình đạt 74.5 tuổi năm 2023, tăng 4 năm so với năm 1990 (70.5 tuổi)."
+          explanation: "Kinh tế vững mạnh là cơ sở đảm bảo độc lập chính trị.",
         },
         {
-          question: "Tỷ lệ biết chữ của Việt Nam hiện tại là bao nhiêu?",
-          options: ["95.2%", "98.85%", "97.1%", "96.8%"],
+          question: "Nguyên tắc phát triển kinh tế của Đảng là:",
+          options: [
+            "Nhà nước nắm toàn bộ sản xuất",
+            "Kết hợp nhiều thành phần kinh tế theo cơ chế thị trường có quản lý",
+            "Phát triển kinh tế tư bản chủ nghĩa",
+            "Đóng cửa để bảo vệ sản xuất trong nước",
+          ],
           correctAnswer: 1,
-          explanation: "Tỷ lệ biết chữ đạt 98.85%, tăng đáng kể từ 87% năm 2000, phản ánh thành tựu giáo dục."
+          explanation:
+            "Mô hình này vừa phù hợp với thực tiễn vừa đảm bảo tính định hướng XHCN.",
         },
         {
-          question: "Việt Nam đặt mục tiêu tăng trưởng GDP năm 2025 là bao nhiêu?",
-          options: ["7.5-8.0%", "8.3-8.5%", "6.8-7.2%", "9.0-9.5%"],
+          question: "Về văn hóa, Đảng xác định:",
+          options: [
+            "Văn hóa là sản phẩm phụ của kinh tế",
+            "Văn hóa là nền tảng tinh thần, vừa là mục tiêu, vừa là động lực của phát triển",
+            "Chỉ cần hội nhập kinh tế, không cần hội nhập văn hóa",
+            "Tiếp thu toàn bộ văn hóa phương Tây",
+          ],
           correctAnswer: 1,
-          explanation: "Việt Nam đặt mục tiêu tăng trưởng GDP 8.3-8.5% năm 2025, thể hiện tham vọng phát triển cao."
+          explanation:
+            "Đây là quan điểm xuyên suốt được khẳng định tại Hội nghị TW5 khóa VIII.",
         },
         {
-          question: "Đường sắt tốc độ cao Bắc-Nam có tổng mức đầu tư là bao nhiêu?",
-          options: ["58 tỷ USD", "67 tỷ USD", "75 tỷ USD", "82 tỷ USD"],
+          question: "Nghị quyết TW5 khóa VIII (1998) tập trung vào vấn đề gì?",
+          options: [
+            "Phát triển nông nghiệp",
+            "Xây dựng nền văn hóa tiên tiến, đậm đà bản sắc dân tộc",
+            "Phát triển công nghiệp nặng",
+            "Cải cách hành chính",
+          ],
           correctAnswer: 1,
-          explanation: "Dự án đường sắt tốc độ cao Bắc-Nam có tổng mức đầu tư 67 tỷ USD, dự án hạ tầng lớn nhất Việt Nam."
+          explanation:
+            "Nghị quyết nhấn mạnh việc giữ gìn bản sắc dân tộc trong hội nhập.",
         },
         {
-          question: "Tỷ lệ bao phủ bảo hiểm y tế của Việt Nam hiện tại là bao nhiêu?",
-          options: ["90%", "93%", "95%", "88%"],
-          correctAnswer: 1,
-          explanation: "Tỷ lệ bao phủ BHYT đạt 93% dân số, đảm bảo y tế toàn dân và giảm gánh nặng chi phí y tế."
-        },
-        {
-          question: "Tỷ lệ xã đạt chuẩn nông thôn mới của Việt Nam là bao nhiêu?",
-          options: ["75%", "78%", "82%", "85%"],
-          correctAnswer: 1,
-          explanation: "78% số xã đạt chuẩn nông thôn mới, cải thiện đáng kể cơ sở hạ tầng và đời sống nông thôn."
-        },
-        {
-          question: "Việt Nam có quan hệ ngoại giao với bao nhiêu quốc gia?",
-          options: ["190 quốc gia", "193 quốc gia", "195 quốc gia", "188 quốc gia"],
-          correctAnswer: 1,
-          explanation: "Việt Nam có quan hệ ngoại giao với 193 quốc gia, thể hiện vị thế và uy tín quốc tế ngày càng cao."
-        }
-      ]
-    },
-    timeline: {
-      title: "Timeline Lịch sử Việt Nam",
-      icon: "⏳",
-      questions: [
-        {
-          question: "Sự kiện nào đánh dấu bước ngoặt quan trọng nhất trong lịch sử Việt Nam hiện đại?",
-          options: ["Chiến thắng Điện Biên Phủ (1954)", "Thống nhất đất nước (1975)", "Đổi mới kinh tế (1986)", "Tất cả đều quan trọng"],
-          correctAnswer: 3,
-          explanation: "Mỗi sự kiện đều có ý nghĩa lịch sử quan trọng: 1954 mở ra độc lập, 1975 thống nhất đất nước, 1986 đổi mới phát triển. Tất cả đều là những bước ngoặt then chốt."
-        },
-        {
-          question: "Chiến thắng Điện Biên Phủ diễn ra vào ngày nào?",
-          options: ["7/5/1954", "19/12/1946", "2/9/1945", "30/4/1975"],
+          question: "Giữ độc lập tự chủ trong hội nhập giúp Việt Nam:",
+          options: [
+            "Không phụ thuộc, giữ vững chủ quyền và lợi ích quốc gia",
+            "Cạnh tranh với các nước láng giềng",
+            "Tự cô lập để bảo vệ văn hóa",
+            "Tăng nhập siêu",
+          ],
           correctAnswer: 0,
-          explanation: "Chiến thắng Điện Biên Phủ ngày 7/5/1954 kết thúc 8 năm kháng chiến chống Pháp, mở ra kỷ nguyên độc lập dân tộc."
+          explanation:
+            "Đây là mục tiêu xuyên suốt của đường lối đối ngoại độc lập, tự chủ.",
         },
         {
-          question: "Việt Nam tuyên bố độc lập vào ngày nào?",
-          options: ["19/8/1945", "2/9/1945", "25/8/1945", "15/8/1945"],
-          correctAnswer: 1,
-          explanation: "Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa."
-        },
-        {
-          question: "Hiệp định Paris về Việt Nam được ký vào năm nào?",
-          options: ["1972", "1973", "1974", "1975"],
-          correctAnswer: 1,
-          explanation: "Hiệp định Paris được ký ngày 27/1/1973, chấm dứt chiến tranh và lập lại hòa bình ở Việt Nam."
-        },
-        {
-          question: "Việt Nam gia nhập Liên Hợp Quốc vào năm nào?",
-          options: ["1975", "1976", "1977", "1978"],
-          correctAnswer: 2,
-          explanation: "Việt Nam chính thức gia nhập Liên Hợp Quốc ngày 20/9/1977, trở thành thành viên thứ 149."
-        },
-        {
-          question: "Đại hội Đảng nào đã quyết định chính sách Đổi mới?",
-          options: ["Đại hội V", "Đại hội VI", "Đại hội VII", "Đại hội VIII"],
-          correctAnswer: 1,
-          explanation: "Đại hội VI (12/1986) đã quyết định chính sách Đổi mới, chuyển từ kinh tế kế hoạch hóa sang kinh tế thị trường."
-        },
-        {
-          question: "Việt Nam bình thường hóa quan hệ với Mỹ vào năm nào?",
-          options: ["1994", "1995", "1996", "1997"],
-          correctAnswer: 1,
-          explanation: "Việt Nam và Mỹ bình thường hóa quan hệ ngoại giao ngày 11/7/1995, mở ra kỷ nguyên hợp tác mới."
-        },
-        {
-          question: "Việt Nam đăng cai APEC lần đầu tiên vào năm nào?",
-          options: ["2005", "2006", "2007", "2008"],
-          correctAnswer: 1,
-          explanation: "Việt Nam đăng cai APEC 2006, khẳng định vị thế và năng lực tổ chức sự kiện quốc tế lớn."
-        },
-        {
-          question: "Việt Nam trở thành thành viên không thường trực Hội đồng Bảo an LHQ lần đầu vào năm nào?",
-          options: ["2008-2009", "2020-2021", "2010-2011", "2015-2016"],
+          question: "Hội nhập về văn hóa được hiểu là:",
+          options: [
+            "Tiếp thu tinh hoa nhân loại, đồng thời bảo vệ giá trị truyền thống dân tộc",
+            "Sao chép hoàn toàn văn hóa nước ngoài",
+            "Loại bỏ yếu tố truyền thống",
+            "Đóng cửa văn hóa",
+          ],
           correctAnswer: 0,
-          explanation: "Việt Nam lần đầu trở thành thành viên không thường trực HĐBA LHQ nhiệm kỳ 2008-2009."
+          explanation:
+            "Đảng chủ trương hội nhập văn hóa có chọn lọc, chống lai căng, thực dụng.",
         },
         {
-          question: "Việt Nam đăng cai Hội nghị thượng đỉnh Mỹ-Triều Tiên lần 2 vào năm nào?",
-          options: ["2018", "2019", "2020", "2021"],
+          question:
+            "Kết quả của việc giữ vững độc lập, tự chủ trong hội nhập là:",
+          options: [
+            "Tăng trưởng kinh tế gắn với ổn định chính trị – xã hội",
+            "Gia tăng phụ thuộc vào viện trợ",
+            "Đóng cửa nền kinh tế",
+            "Giảm vai trò của Nhà nước",
+          ],
+          correctAnswer: 0,
+          explanation:
+            "Đây là minh chứng cho sự thành công của đường lối hội nhập đúng đắn.",
+        },
+      ],
+    },
+    hoiNhapLessons: {
+      title: "Thành tựu và bài học của hội nhập 1996–2005",
+      icon: "📈",
+      questions: [
+        {
+          question:
+            "Tăng trưởng kinh tế Việt Nam giai đoạn 1996–2005 có đặc điểm:",
+          options: [
+            "Liên tục và ổn định",
+            "Suy giảm nghiêm trọng",
+            "Phụ thuộc vào viện trợ nước ngoài",
+            "Chỉ tăng trong lĩnh vực nông nghiệp",
+          ],
+          correctAnswer: 0,
+          explanation:
+            "Kinh tế tăng trưởng liên tục, đời sống nhân dân cải thiện rõ rệt.",
+        },
+        {
+          question:
+            "Cơ cấu kinh tế giai đoạn 1996–2005 chuyển dịch theo hướng:",
+          options: [
+            "Nông nghiệp – công nghiệp – dịch vụ",
+            "Công nghiệp – dịch vụ – nông nghiệp",
+            "Dịch vụ – công nghiệp – nông nghiệp",
+            "Không thay đổi đáng kể",
+          ],
           correctAnswer: 1,
-          explanation: "Hội nghị thượng đỉnh Mỹ-Triều Tiên lần 2 diễn ra tại Hà Nội tháng 2/2019, thể hiện vai trò ngoại giao của Việt Nam."
-        }
-      ]
-    }
-  }
+          explanation:
+            "Công nghiệp hóa – hiện đại hóa làm tăng tỷ trọng công nghiệp và dịch vụ.",
+        },
+        {
+          question: "Một kết quả nổi bật của hội nhập là:",
+          options: [
+            "Mất ổn định chính trị",
+            "Vị thế quốc tế của Việt Nam được nâng cao",
+            "Gia tăng xung đột khu vực",
+            "Giảm hợp tác quốc tế",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Việt Nam trở thành đối tác tin cậy, có vị thế trong khu vực và thế giới.",
+        },
+        {
+          question: "Một trong ba bài học lớn rút ra là:",
+          options: [
+            "Hội nhập càng sâu càng mất độc lập",
+            "Phải giữ vững độc lập, tự chủ trong mọi tình huống",
+            "Cần phụ thuộc vào nước lớn",
+            "Chú trọng quân sự hơn kinh tế",
+          ],
+          correctAnswer: 1,
+          explanation: "Độc lập tự chủ là điều kiện tiên quyết của hội nhập.",
+        },
+        {
+          question: "Phát huy nội lực kết hợp nguồn lực bên ngoài là:",
+          options: [
+            "Phương châm cơ bản của hội nhập",
+            "Chính sách tạm thời",
+            "Sai lầm chiến lược",
+            "Hạn chế mở cửa",
+          ],
+          correctAnswer: 0,
+          explanation:
+            "Đây là phương châm giúp Việt Nam phát triển bền vững trong hội nhập.",
+        },
+        {
+          question: "Thành tựu hội nhập chứng minh đường lối của Đảng là:",
+          options: [
+            "Thận trọng quá mức",
+            "Đúng đắn và sáng tạo",
+            "Lệ thuộc vào mô hình nước ngoài",
+            "Thiếu thực tế",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Thành tựu kinh tế – chính trị – đối ngoại khẳng định tính đúng đắn của đường lối.",
+        },
+        {
+          question: "Một trong những thách thức đặt ra sau hội nhập là:",
+          options: [
+            "Cạnh tranh quốc tế gay gắt",
+            "Suy giảm dân số",
+            "Thiếu tài nguyên thiên nhiên",
+            "Thiếu đất nông nghiệp",
+          ],
+          correctAnswer: 0,
+          explanation:
+            "Hội nhập đi kèm cạnh tranh gay gắt trên thị trường toàn cầu.",
+        },
+        {
+          question: "Việc gia nhập các tổ chức quốc tế giúp Việt Nam:",
+          options: [
+            "Tăng cường hợp tác và mở rộng thị trường",
+            "Giảm đầu tư nước ngoài",
+            "Mất quyền tự chủ kinh tế",
+            "Bị cô lập về chính trị",
+          ],
+          correctAnswer: 0,
+          explanation:
+            "Hội nhập giúp mở rộng hợp tác kinh tế, thương mại, đầu tư.",
+        },
+        {
+          question: "Bài học quan trọng trong xây dựng văn hóa hội nhập là:",
+          options: [
+            "Hòa nhập nhưng không hòa tan",
+            "Tiếp thu toàn bộ văn hóa nước ngoài",
+            "Bỏ qua bản sắc dân tộc",
+            "Không cần bảo tồn văn hóa truyền thống",
+          ],
+          correctAnswer: 0,
+          explanation:
+            "Hòa nhập nhưng không hòa tan là nguyên tắc cốt lõi của văn hóa hội nhập.",
+        },
+        {
+          question: "Tổng kết lại, giai đoạn 1996–2005 chứng minh Việt Nam đã:",
+          options: [
+            "Thất bại trong hội nhập",
+            "Hội nhập thành công, khẳng định vị thế quốc gia",
+            "Chưa đạt được tiến bộ đáng kể",
+            "Phụ thuộc hoàn toàn vào viện trợ",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "Đây là giai đoạn nền tảng, chuẩn bị cho hội nhập sâu rộng sau này (gia nhập WTO 2007).",
+        },
+      ],
+    },
+  };
 
-  const currentQuiz = quizzes[selectedQuiz]
+  const currentQuiz = quizzes[selectedQuiz];
 
   return (
     <div className="max-w-4xl mx-auto mt-20">
@@ -297,9 +532,11 @@ const QuizPage = () => {
           <Card className="content-card">
             <div className="flex items-center mb-4">
               <span className="text-2xl mr-3">📚</span>
-              <h3 className="text-xl font-semibold text-primary">Chọn chủ đề kiểm tra</h3>
+              <h3 className="text-xl font-semibold text-primary">
+                Chọn chủ đề kiểm tra
+              </h3>
             </div>
-            
+
             <Select
               value={selectedQuiz}
               onChange={setSelectedQuiz}
@@ -333,8 +570,12 @@ const QuizPage = () => {
                 <div className="flex items-center">
                   <span className="text-3xl mr-4">{currentQuiz.icon}</span>
                   <div>
-                    <h2 className="text-2xl font-bold text-primary">{currentQuiz.title}</h2>
-                    <p className="text-gray-600 mt-1">Kiểm tra hiểu biết của bạn về chủ đề này</p>
+                    <h2 className="text-2xl font-bold text-primary">
+                      {currentQuiz.title}
+                    </h2>
+                    <p className="text-gray-600 mt-1">
+                      Kiểm tra hiểu biết của bạn về chủ đề này
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -355,22 +596,22 @@ const QuizPage = () => {
             <h3 className="text-xl font-semibold text-primary mb-4">
               📈 Thống kê câu hỏi
             </h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {Object.entries(quizzes).map(([key, quiz]) => (
                 <div
                   key={key}
                   className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                     selectedQuiz === key
-                      ? 'border-primary bg-primary/10'
-                      : 'border-gray-200 bg-gray-50 hover:border-primary/50'
+                      ? "border-primary bg-primary/10"
+                      : "border-gray-200 bg-gray-50 hover:border-primary/50"
                   }`}
                   onClick={() => setSelectedQuiz(key)}
                 >
                   <div className="text-center">
                     <div className="text-2xl mb-2">{quiz.icon}</div>
                     <h5 className="font-semibold text-sm text-gray-700 mb-1">
-                      {quiz.title.split(' ')[0]} {quiz.title.split(' ')[1]}
+                      {quiz.title.split(" ")[0]} {quiz.title.split(" ")[1]}
                     </h5>
                     <p className="text-xs text-gray-500">
                       {quiz.questions.length} câu hỏi
@@ -379,22 +620,29 @@ const QuizPage = () => {
                 </div>
               ))}
             </div>
-            
+
             <Divider />
-            
+
             <div className="text-center text-sm text-gray-600">
               <p>
-                <strong>Tổng cộng:</strong> {Object.values(quizzes).reduce((total, quiz) => total + quiz.questions.length, 0)} câu hỏi trong {Object.keys(quizzes).length} chủ đề về lịch sử Việt Nam
+                <strong>Tổng cộng:</strong>{" "}
+                {Object.values(quizzes).reduce(
+                  (total, quiz) => total + quiz.questions.length,
+                  0
+                )}{" "}
+                câu hỏi trong {Object.keys(quizzes).length} chủ đề về lịch sử
+                Việt Nam
               </p>
               <p className="mt-2">
-                Hãy thử sức với tất cả các chủ đề để kiểm tra kiến thức của bạn! 🎯
+                Hãy thử sức với tất cả các chủ đề để kiểm tra kiến thức của bạn!
+                🎯
               </p>
             </div>
           </Card>
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default QuizPage
+export default QuizPage;
