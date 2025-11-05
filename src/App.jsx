@@ -28,7 +28,7 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            <Route path="/" element={<DoiMoi />} />
+            <Route path="/" element={<HoiNhap />} />
             <Route path="/bao-cap" element={<BaoCap />} />
             <Route path="/doi-moi" element={<DoiMoi />} />
             <Route path="/hoi-nhap" element={<HoiNhap />} />
