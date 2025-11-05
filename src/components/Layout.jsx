@@ -23,15 +23,15 @@ const menuItems = [
       </svg>
     )
   },
-  { 
-    path: '/nhan-dinh', 
-    label: 'Nhận định', 
-    icon: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2zM8 9h8v2H8V9zm0 4h5v2H8v-2z" />
-      </svg>
-    )
-  },
+  // { 
+  //   path: '/nhan-dinh', 
+  //   label: 'Nhận định', 
+  //   icon: (
+  //     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+  //     <path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2zM8 9h8v2H8V9zm0 4h5v2H8v-2z" />
+  //     </svg>
+  //   )
+  // },
   { 
     path: '/doi-moi', 
     label: 'Thành tựu đổi mới', 
