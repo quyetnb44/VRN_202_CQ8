@@ -3,16 +3,16 @@ import { useLocation, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const menuItems = [
-  { 
-    path: '/bao-cap', 
-    label: 'Thời kì Bao cấp (Bối cảnh)', 
-    icon: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 5h2v6h-2V7zm1 10a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/>
+  // { 
+  //   path: '/bao-cap', 
+  //   label: 'Thời kì Bao cấp (Bối cảnh)', 
+  //   icon: (
+  //     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+  //       <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 5h2v6h-2V7zm1 10a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/>
 
-      </svg>
-    )
-  },
+  //     </svg>
+  //   )
+  // },
   { 
     path: '/hoi-nhap', 
     label: 'Hội nhập quốc tế', 
@@ -24,21 +24,21 @@ const menuItems = [
     )
   },
   { 
-    path: '/doi-moi', 
-    label: 'Thành tựu Đổi mới', 
-    icon: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-      </svg>
-    )
-  },
-  { 
     path: '/nhan-dinh', 
     label: 'Nhận định', 
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2-7H5c-1.1 0-2 .9-2 2v1h18V6c0-1.1-.9-2-2-2zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-1H6v1z"/>
+      <path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2zM8 9h8v2H8V9zm0 4h5v2H8v-2z" />
       </svg>
+    )
+  },
+  { 
+    path: '/doi-moi', 
+    label: 'Thành tựu đổi mới', 
+    icon: (
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2a10 10 0 00-9.95 9h2.02A8 8 0 1112 20v2a10 10 0 000-20zm0 5l4 4h-3v5h-2v-5H8l4-4z"/>
+</svg>
     )
   },
   // { 
@@ -68,12 +68,21 @@ const menuItems = [
       </svg>
     )
   },
+  // { 
+  //   path: '/game', 
+  //   label: 'Game', 
+  //   icon: (
+  //     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+  //       <path d="M15.5 12c0 1.38-1.12 2.5-2.5 2.5S10.5 13.38 10.5 12s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5zm-2.5-8c-5 0-9.27 3.11-11 7.5 1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C20.27 7.11 16 4 13 4zm0 13.5c-3.33 0-6.27-1.83-7.79-4.5C6.73 10.33 9.67 8.5 13 8.5s6.27 1.83 7.79 4.5c-1.52 2.67-4.46 4.5-7.79 4.5z"/>
+  //     </svg>
+  //   )
+  // },
   { 
-    path: '/game', 
-    label: 'Game', 
+    path: '/policy-simulator', 
+    label: 'Mô phỏng Chính sách', 
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M15.5 12c0 1.38-1.12 2.5-2.5 2.5S10.5 13.38 10.5 12s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5zm-2.5-8c-5 0-9.27 3.11-11 7.5 1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C20.27 7.11 16 4 13 4zm0 13.5c-3.33 0-6.27-1.83-7.79-4.5C6.73 10.33 9.67 8.5 13 8.5s6.27 1.83 7.79 4.5c-1.52 2.67-4.46 4.5-7.79 4.5z"/>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
       </svg>
     )
   },
@@ -113,10 +122,10 @@ const Layout = ({ children }) => {
               />
               <div className="min-w-0">
                 <h1 className="text-lg sm:text-xl font-bold text-white truncate">
-                  Lịch sử Việt Nam
+                  VNR202-CQ8
                 </h1>
                 <p className="text-xs sm:text-sm truncate" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-                  Từ Bao cấp đến Đổi mới
+                  Việt Nam Hội nhập Quốc tế
                 </p>
               </div>
             </div>

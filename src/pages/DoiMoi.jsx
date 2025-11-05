@@ -57,9 +57,9 @@ const DoiMoi = () => {
               đổi mới
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed">
+          {/* <p className="text-xl md:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed">
             (1986-nay)
-          </p>
+          </p> */}
         </div>
 
         {/* Kinh tế Section */}

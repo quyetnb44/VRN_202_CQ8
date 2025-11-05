@@ -11,6 +11,7 @@ import QuizPage from './pages/QuizPage'
 import Aviamasters from './pages/Aviamasters'
 import ChatBox from './components/ChatBox'
 import HoiNhap from './pages/HoiNhap'
+import PolicySimulator from './pages/PolicySimulator'
 
 const theme = {
   token: {
@@ -27,7 +28,7 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            <Route path="/" element={<BaoCap />} />
+            <Route path="/" element={<DoiMoi />} />
             <Route path="/bao-cap" element={<BaoCap />} />
             <Route path="/doi-moi" element={<DoiMoi />} />
             <Route path="/hoi-nhap" element={<HoiNhap />} />
@@ -36,6 +37,7 @@ function App() {
             <Route path="/tu-lieu" element={<TuLieu />} />
             <Route path="/quiz" element={<QuizPage />} />
             <Route path="/game" element={<Aviamasters />} />
+            <Route path="/policy-simulator" element={<PolicySimulator />} />
           </Routes>
         </Layout>
 

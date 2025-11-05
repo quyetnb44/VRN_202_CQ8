@@ -529,52 +529,7 @@ const NhanDinh = () => {
             </Card>
           </motion.div>
 
-          <motion.div variants={fadeInUp} className="text-center">
-            <Card className="shadow-xl border" style={{ backgroundColor: '#6b291c', color: '#fbbf24', borderColor: '#6b291c' }}>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-6">Khám phá thêm về thành tựu Việt Nam</h3>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  {/* <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-yellow-400 to-yellow-500 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
-                    style={{ color: '#6b291c' }}
-                  >
-                    <FileTextOutlined className="mr-2" />
-                    Khám phá báo cáo chi tiết
-                  </motion.button> */}
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={async () => {
-                      try {
-                        const imageUrl = 'https://media.vietnamplus.vn/images/87c1da582c501a99b4b23f2f14d2e91ff55546d9a543a98ddde2bb5de35ebb6418e172c8dc581a5ab52999553c6b5de97436a993dd05491988813a5aae53b9255040513851267fe007fe9f09f10c5946/infographics_kinh_te_vietnam.jpeg';
-                        const response = await fetch(imageUrl);
-                        const blob = await response.blob();
-                        const url = window.URL.createObjectURL(blob);
-                        const link = document.createElement('a');
-                        link.href = url;
-                        link.download = 'Infographic_Kinh_Te_Vietnam.jpeg';
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        window.URL.revokeObjectURL(url);
-                      } catch (error) {
-                        console.error('Download failed:', error);
-                        // Fallback: open in new tab
-                        window.open('https://media.vietnamplus.vn/images/87c1da582c501a99b4b23f2f14d2e91ff55546d9a543a98ddde2bb5de35ebb6418e172c8dc581a5ab52999553c6b5de97436a993dd05491988813a5aae53b9255040513851267fe007fe9f09f10c5946/infographics_kinh_te_vietnam.jpeg', '_blank');
-                      }
-                    }}
-                    className="bg-gradient-to-r from-yellow-300 to-orange-400 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center cursor-pointer"
-                    style={{ color: '#6b291c' }}
-                  >
-                    <DownloadOutlined className="mr-2" />
-                    Tải Infographic toàn cảnh
-                  </motion.button>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
+          
         </motion.div>
       </div>
 
